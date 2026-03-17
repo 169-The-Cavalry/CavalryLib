@@ -1,29 +1,16 @@
 #pragma once
 #include "globals.hpp"
-#include "tasks.hpp"
 
-/**
- * Entry point for autonomous code
- * Executed in new VEX task (thread)
- * Runs before opcontrol (during competition)
-*/
+// Competition autonomous entry point.
 void autonomous();
-void skills();
 
-void awp_left_blue();
-void awp_right_blue();
-void awp_left_red();
-void awp_right_red();
+// Selects and runs the currently chosen autonomous routine.
+void run_autonomous();
 
-void elim_left_blue();
-void elim_right_blue();
-void elim_left_red();
-void elim_right_red();
-
-void fastpush_right();
-void fastpush_left();
-
-void select_auto();
-
-void shimmy_shake();
-void shimmy_shake_fast(float endTheta);
+// Template autonomous routines:
+// 1) Keep AUTO_DO_NOTHING as a safe fallback.
+// 2) Replace AUTO_TEST_DRIVE with your actual match autonomous.
+// 3) Use AUTO_SKILLS_TEMPLATE as your skills run starting point.
+void auto_do_nothing();
+void auto_test_drive();
+void auto_skills_template();

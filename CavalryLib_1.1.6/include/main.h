@@ -66,7 +66,6 @@ void initialize(void);
 void disabled(void);
 void competition_initialize(void);
 void opcontrol(void);
-void create_field_map();
 #ifdef __cplusplus
 }
 #endif
